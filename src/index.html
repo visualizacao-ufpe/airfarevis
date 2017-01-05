@@ -1,0 +1,140 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/materialize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/leaflet.css">
+        <link rel="stylesheet" href="css/leaflet.awesome-markers.css">
+        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+        <div class="main-app">
+            <div class="row">
+                 <!--Top Left-->
+                <div class="col s6 left-box">
+                    <div class="row">
+                        <!--<div class="switch right">-->
+                            <!--<label>-->
+                                <!--Origem-->
+                                <!--<input id="map-origem-destination-selector" type="checkbox">-->
+                                <!--<span class="lever"></span>-->
+                                <!--Destino-->
+                            <!--</label>-->
+                        <!--</div>-->
+                    </div>
+                    <div id="mapid"></div>
+                    <div class="row">
+                        <div class="input-field col s6 m6">
+                            <select class="broser-default select-origin">
+                                <option value="" disabled selected>Selecione sua Origem</option>
+                            </select>
+                            <label>Origem</label>
+                        </div>
+                        <div class="input-field col s6 m6">
+                            <select disabled class="broser-default  select-destination">
+                                <option value="" disabled selected>Selecione seu Destino</option>
+                            </select>
+                            <label>Destino</label>
+                        </div>
+                    </div>
+                </div>
+                <!--Top Right-->
+                <div class="col s6 right-box">
+                    <div class="row">Frequencia de Postagem por:</div>
+                    <div class="col s6 graph-day"> Dias </div>
+                    <div class="col s6 graph-month"> Meses </div>
+                </div>
+                <div class="col s6 ">
+                    <!--Aqui-->
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s6 graph-sales">
+                    <div class="col s12 graph-container"></div>
+                </div>
+                <div class="col s6 graph-legend">
+                    <div class="row">
+                        <div class="col s3 legend-price">
+                            <div class="col s12 div-legend"></div>
+                            <div class="col s12 div-price"></div>
+                        </div>
+                        <div class="col s9 div-box-plot"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </body>
+    <!--<script src="js/new-cities-location.js"></script>-->
+    <script src="js/gat-cities.js"></script>
+    <script src="js/dependencies/jquery.js"></script>
+    <script src="js/dependencies/leaflet.js"></script>
+    <script src="js/dependencies/leaflet.awesome-markers.js"></script>
+    <script src="js/dependencies/plugins.js"></script>
+    <script src="js/dependencies/materialize.js"></script>
+    <script src="js/dependencies/d3.js"></script>
+    <script src="js/dependencies/d3-legend.min.js"></script>
+    <script src="js/dependencies/crossfilter.js"></script>
+    <!--<script src="js/main.js"></script>-->
+    <script src="js/global.js"></script>
+    <script src="js/graph.js"></script>
+    <script src="js/initialize-data.js"></script>
+    <script src="js/data-filter.js"></script>
+    <script src="js/map.js"></script>
+    <style>
+            .info {
+                padding: 6px 8px;
+                font: 14px/16px Arial, Helvetica, sans-serif;
+                background: white;
+                background: rgba(255,255,255,0.8);
+                box-shadow: 0 0 15px rgba(0,0,0,0.2);
+                border-radius: 5px;
+            }
+
+            .legend {
+                padding: 6px 8px;
+                font: 14px/16px Arial, Helvetica, sans-serif;
+                background: white;
+                background: rgba(255,255,255,0.8);
+                box-shadow: 0 0 15px rgba(0,0,0,0.2);
+                border-radius: 5px;
+            }
+            .legend-top{
+                position: relative;
+                margin-right: 49px;
+            }
+            .legend-bottom{
+                position: relative;
+            }
+            .info-text {
+                margin-left: 35px;
+            }
+
+            .info leaflet-control {
+                width: 105px;
+                height: 100px;
+            }
+
+            .legend-bottom awesome-marker-icon-red awesome-marker leaflet-zoom-animated leaflet-clickable {
+                margin-top: 50px;
+            }
+    </style>
+
+</html>
