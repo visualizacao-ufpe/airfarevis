@@ -14,7 +14,7 @@ function type(d) {
     return d;
 }
 
-d3.csv("../data/final_trips4.csv", type, function (data) {
+d3.csv("src/data/final_trips4.csv", type, function (data) {
     d3.select("body").style("visibility", "visible");
     // console.log("d", data);
     var gol = crossfilter(data).all().filter(function(d){return d.carrier == "Gol"})
